@@ -17,7 +17,7 @@ def data_loader(path, table_idx, player_or_dealer):
 
 class MyPlayer:
     def __init__(self,table_index):
-        pass  
+        self.table_index=table_index
         
     def get_card_value_from_spy_value(self,value):
         """
