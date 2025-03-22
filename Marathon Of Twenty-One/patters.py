@@ -107,7 +107,7 @@ def create_clustering_models():
             # Determine optimal number of clusters using silhouette score
             best_score = -1
             best_k = 2
-            for k in range(2, 31):  # Try 2-10 clusters
+            for k in range(2, 41):  # Try 2-10 clusters
                 kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
                 kmeans.fit(X_train_scaled)
                 score = silhouette_score(X_train_scaled, kmeans.labels_)
@@ -252,14 +252,14 @@ def test_prediction_example():
 # create_clustering_plot()
 
 # Call the new function to create and display separate plots
-# create_separate_plots(0)
-# create_separate_plots(1)
-# create_separate_plots(2)
-# create_separate_plots(3)
-# create_separate_plots(4)
+create_separate_plots(0)
+create_separate_plots(1)
+create_separate_plots(2)
+create_separate_plots(3)
+create_separate_plots(4)
 
 # Uncomment the following line to train and save all clustering models
-results = create_clustering_models()
+# results = create_clustering_models()
 
 # Uncomment the following line to test the prediction function
 # test_prediction_example()
